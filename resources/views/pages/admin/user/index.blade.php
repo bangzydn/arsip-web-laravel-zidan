@@ -65,6 +65,7 @@
                                         <th width="10">No.</th>
                                         <th>Nama</th>
                                         <th>Email</th>
+                                        <th>Peran</th>
                                         <th>Departemen</th>
                                         <th>Cabang</th>
                                         <th>Aksi</th>
@@ -97,6 +98,7 @@
           },
           { data: 'name', name: 'name' },
           { data: 'email', name: 'email' },
+          { data: 'role_id', name: 'role_id' },
           { data: 'department_id', name: 'department_id' },
           { data: 'branch_id', name: 'branch_id' },
           { 

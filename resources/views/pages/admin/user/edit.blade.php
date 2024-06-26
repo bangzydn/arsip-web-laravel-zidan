@@ -85,6 +85,39 @@
                                         @enderror
                                     </div>   
                                 </div>
+                                <div class="mb-3">
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="role">Peran</label>
+                                        <input class="form-control @error('role_id') is-invalid @enderror" name="role_id" type="role_id" value="{{ $item->role_id }}" required/>
+                                        @error('role_id')
+                                            <div class="invalid-feedback">
+                                                {{ $message; }}
+                                            </div>
+                                        @enderror
+                                    </div>   
+                                </div> 
+                                <div class="mb-3">
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="cabang">Cabang</label>
+                                        <input class="form-control @error('branch_id') is-invalid @enderror" name="branch_id" type="branch_id" value="{{ $item->branch_id }}" required/>
+                                        @error('branch_id')
+                                            <div class="invalid-feedback">
+                                                {{ $message; }}
+                                            </div>
+                                        @enderror
+                                    </div>   
+                                </div>     
+                                <div class="mb-3">
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="department">Departemen</label>
+                                        <input class="form-control @error('department_id') is-invalid @enderror" name="department_id" type="department_id" value="{{ $item->department_id }}" required/>
+                                        @error('department_id')
+                                            <div class="invalid-feedback">
+                                                {{ $message; }}
+                                            </div>
+                                        @enderror
+                                    </div>   
+                                </div> 
                                 <!-- Submit button-->
                                 <button class="btn btn-primary" type="submit">
                                     Perbarui Profil
