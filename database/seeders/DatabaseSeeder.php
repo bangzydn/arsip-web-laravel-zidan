@@ -18,18 +18,19 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         User::create([
-            'name' => 'Zidan Muhammad Herman',
-            'email' => 'admin@gmail.com',
-            'password' => bcrypt('admin123'),
+            'name' => 'Huna',
+            'email' => 'huna@gmail.com',
+            'password' => bcrypt('huna1234'),
+            'role_id'=> 2,
             'department_id' => 1,
             'branch_id' => 1 
         ]);
-        Department::create([
-            'name' => 'Kecamatan 1'
-        ]);
-        Branch::create([
-            'branch_name' => 'Keluharan 1'
-        ]);
-        
+        // Department::create([
+        //     'name' => 'Kecamatan 1'
+        // ]);
+        // Branch::create([
+        //     'branch_name' => 'Keluharan 1'
+        // // ]);
+        // $this->call(RoleSeeder::class);
     }
 }

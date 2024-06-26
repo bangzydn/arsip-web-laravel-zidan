@@ -74,13 +74,13 @@
                     <h5 class="modal-title" id="createModal">Tambah Data Cabang</h5>
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="{{ route('department.store') }}" method="post">
+                <form action="{{ route('branch.store') }}" method="post">
                     @csrf
                     <div class="modal-body">
                         <div class="mb-3">
                             <div class="col-md-12">
                                 <label for="post_id">Nama Cabang</label>
-                                <input type="text" name="name" class="form-control" placeholder="Masukan Nama Cabang.." required>
+                                <input type="text" name="branch_name" class="form-control" placeholder="Masukan Nama Cabang.." required>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
     @foreach ($branch as $item)
         @php
             $id = $item->id;
-            $name = $item->name;
+            $name = $item->branch_name;
         @endphp
         <div class="modal fade" id="updateModal{{ $id }}" role="dialog" aria-labelledby="createModal" aria-hidden="true" style="overflow:hidden;">
             <div class="modal-dialog" role="document">
@@ -112,7 +112,7 @@
                             <div class="mb-3">
                                 <div class="col-md-12">
                                     <label for="post_id">Nama Cabang</label>
-                                    <input type="text" name="name" value="{{ $name; }}" class="form-control" placeholder="Masukan Nama Cabang.." required>
+                                    <input type="text" name="branch_name" value="{{ $branch_name; }}" class="form-control" placeholder="Masukan Nama Departemen.." required>
                                 </div>
                             </div>
                         </div>

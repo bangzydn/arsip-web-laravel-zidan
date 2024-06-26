@@ -56,7 +56,8 @@
                                     <tr>
                                         <th width="10">No.</th>
                                         <th>No. Surat</th>
-                                        <th>Tanggal</th>
+                                        <th>Tanggal Diterima</th>
+                                        <th>Perihal</th>
                                         <th>Departemen</th>
                                         <th>Cabang</th>
                                         <th>Pengirim</th>
@@ -89,7 +90,8 @@
             searchable: false
           },
           { data: 'letter_no', name: 'letter_no' },
-          { data: 'letter_date', name: 'letter_date' },
+          { data: 'date_received', name: 'date_received' },
+          { data: 'regarding', name: 'regarding' },
           { data: 'department.name', name: 'department.name' },
           { data: 'branch.branch_name', name: 'branch.branch_name' },
           { data: 'sender.name', name: 'sender.name' },

@@ -82,7 +82,7 @@
                                             </div>
                                         @enderror
                                     </div>   
-                                </div>
+                                </div>                                                                
                                 <!-- Submit button-->
                                 <button class="btn btn-primary" type="submit">
                                     Tambah Pengguna Baru

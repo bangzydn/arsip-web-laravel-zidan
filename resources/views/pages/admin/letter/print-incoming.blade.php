@@ -22,6 +22,8 @@
                             <th>No.</th>
                             <th>No. Surat</th>
                             <th>Pengirim</th>
+                            <th>Cabang</th>
+                            <th>Departemen</th>
                             <th style="text-align: center">Tanggal</th>
                             <th style="text-align: center">Diterima</th>
                         </thead>
@@ -34,6 +36,8 @@
                                 <td>{{ $no++; }}</td>
                                 <td>{{ $letter->letter_no }}</td>
                                 <td>{{ $letter->sender->name }}</td>
+                                <td>{{ $letter->branch->branch_name }}</td>
+                                <td>{{ $letter->department->name }}</td>
                                 <td style="text-align: center">{{ date('d-m-Y', strtotime($letter->letter_date)) }}</td>
                                 <td style="text-align: center">{{ date('d-m-Y', strtotime($letter->date_received)) }}</td>
                             </tr>

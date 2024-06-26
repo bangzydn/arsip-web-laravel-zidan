@@ -124,10 +124,10 @@
                                 <div class="mb-3 row">
                                     <label for="branch_id" class="col-sm-3 col-form-label">Cabang</label>
                                     <div class="col-sm-9">
-                                        <select name="department_id" class="form-control selectx" required>
+                                        <select name="branch_id" class="form-control selectx" required>
                                             <option value="">Pilih..</option>
-                                            @foreach ($branchs as $branch)
-                                                <option value="{{ $branch->id }}" {{ (old('branch_id') == $branch->id)? 'selected':''; }}>{{ $branch->branch_name }}</option>
+                                            @foreach ($branch as $branch)
+                                                <option value="{{ $branch->id }}"{{ ($item->branch_id == $branch->id)? 'selected':''; }}>{{ $branch->branch_name }}</option>
                                             @endforeach
                                         </select>
                                     </div>

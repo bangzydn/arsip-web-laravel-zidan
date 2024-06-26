@@ -40,13 +40,14 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::prefix('admin')
         ->middleware('auth')
         ->group(function(){
-            Route::get('/dashboard',[DashboardController::class, 'index'])->name('admin-dashboard');
-            Route::resource('/branch', BranchController::class);
-            Route::resource('/department', DepartmentController::class);
-            Route::resource('/sender', SenderController::class);
-            Route::resource('/letter', LetterController::class, [
+            Route::get('/dashboard',[DashboardController::class, 'index'])->name('admin-dashboard');            
+            Route::get('/departments', [DepartmentController::class, 'index'])->name('department.index');
+            Route::get('/branch', [BranchController::class, 'index'])->name('branch.index');
+            Route::get('/sender', [SenderController::class, 'index'])->name('sender.index');
+            Route::get('/letter', LetterController::class, [
 			    'except' => [ 'show' ]
 		    ]);
+            
             Route::get('letter/surat-masuk', [LetterController::class, 'incoming_mail'])->name('surat-masuk');
             Route::get('letter/surat-keluar', [LetterController::class, 'outgoing_mail'])->name('surat-keluar');
             Route::get('letter/surat/{id}', [LetterController::class, 'show'])->name('detail-surat');

@@ -61,6 +61,10 @@
                                             <td>{{ $item->sender->name }}</td>
                                         </tr>
                                         <tr>
+                                            <th>Cabang</th>
+                                            <td>{{ $item->branch->branch_name }}</td>
+                                        </tr>
+                                        <tr>
                                             <th>Departemen</th>
                                             <td>{{ $item->department->name }}</td>
                                         </tr>
